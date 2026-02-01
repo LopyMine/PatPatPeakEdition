@@ -96,10 +96,10 @@ public class PatPatPeakMod : BaseUnityPlugin, IOnEventCallback
                 return;
             }
 
-            //if (hovered.character == character)
-            //{
-            //    return;
-            //}
+            if (hovered.character == character)
+            {
+                return;
+            }
 
             character.AddStamina(-PatPatConfig.StaminaExchange.Value);
 
@@ -132,7 +132,7 @@ public class PatPatPeakMod : BaseUnityPlugin, IOnEventCallback
         foreach (var h in hits)
         {
             if (h.collider == null) continue;
-            //if (IsColliderPartOfSelf(h.collider)) continue;
+            if (IsColliderPartOfSelf(h.collider)) continue;
 
             IInteractible interactible = h.collider.GetComponentInParent<IInteractible>();
             if (interactible != null)
@@ -196,7 +196,7 @@ public class PatPatPeakMod : BaseUnityPlugin, IOnEventCallback
 
             StaminaBar bar = GUIManager.instance.bar;
             bar.moraleBoostText.enabled = true;
-            bar.moraleBoostText.text = $"Моральный буст от {whoPatted}!";
+            bar.moraleBoostText.text = $"Moral boost from {whoPatted}!";
             StartMoraleBoost(bar);
         }
     }

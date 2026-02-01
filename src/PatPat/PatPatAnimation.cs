@@ -21,6 +21,7 @@ public class PatPatAnimation : MonoBehaviour
         {
             return null;
         }
+
         var go = new GameObject("PatPatAnimation");
         var comp = go.AddComponent<PatPatAnimation>();
         comp._anchorPosition = character.Center + Vector3.up * BillboardHeightOffset;

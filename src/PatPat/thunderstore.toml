@@ -6,7 +6,7 @@ repository = "https://thunderstore.io"
 
 [package]
 namespace = "LopyMine"
-name = "PatPat [Peak Edition]"
+name = "PatPat"
 description = "Allows you to PAT your friends in Peak! Also changes the gameplay a little, not just visual!"
 websiteUrl = ""
 containsNsfwContent = false
